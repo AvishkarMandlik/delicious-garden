@@ -57,15 +57,15 @@ function Home() {
     </div>
 
     <div className="food-Iems-result">
-      <div className='row'>
+      <div className='row '>
       {
         currentFoodItems?.map((foodItem)=>{
-          return(<FoodItemCard 
+          return (<div key={foodItem.imgUrl}><FoodItemCard 
             category={foodItem.category} 
             title={foodItem.title} 
             description={foodItem.description} 
             imgUrl={foodItem.imgUrl} 
-            price={foodItem.price} />)
+            price={foodItem.price} /></div> )
         })
       }
       </div>
